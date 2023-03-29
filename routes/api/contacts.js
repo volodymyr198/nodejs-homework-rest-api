@@ -11,10 +11,14 @@ router.get('/', ctrl.listContacts);
 
 router.get('/:contactId', ctrl.getContactById);
 
-router.post('/', validation(addContactSchema), ctrl.addContact);
+router.post('/', validation.addValid(addContactSchema), ctrl.addContact);
 
 router.delete('/:contactId', ctrl.removeContact);
 
-router.put('/:contactId', validation(updateContactSchema), ctrl.updateContact);
+router.put(
+    '/:contactId',
+    validation.updateValid(updateContactSchema),
+    ctrl.updateContact
+);
 
 module.exports = router;
