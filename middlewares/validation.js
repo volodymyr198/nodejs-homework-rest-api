@@ -34,4 +34,47 @@ const updateFavValid = schema => {
     };
 };
 
-module.exports = { addValid, updateValid, updateFavValid };
+const registerValid = schema => {
+    return (req, res, next) => {
+        const { error } = schema.validate(req.body);
+        if (error) {
+            return res.status(400).json({
+                message: error.message,
+            });
+        }
+        next();
+    };
+};
+
+const loginValid = schema => {
+    return (req, res, next) => {
+        const { error } = schema.validate(req.body);
+        if (error) {
+            return res.status(400).json({
+                message: error.message,
+            });
+        }
+        next();
+    };
+};
+
+const updateSubscriptionValid = schema => {
+    return (req, res, next) => {
+        const { error } = schema.validate(req.body);
+        if (error) {
+            return res.status(400).json({
+                message: error.message,
+            });
+        }
+        next();
+    };
+};
+
+module.exports = {
+    addValid,
+    updateValid,
+    updateFavValid,
+    registerValid,
+    loginValid,
+    updateSubscriptionValid,
+};
