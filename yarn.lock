@@ -2306,11 +2306,6 @@
     "type-is" "^1.6.4"
     "xtend" "^4.0.0"
 
-"nanoid@^4.0.2":
-  "integrity" "sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw=="
-  "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-4.0.2.tgz"
-  "version" "4.0.2"
-
 "natural-compare@^1.4.0":
   "integrity" "sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc="
   "resolved" "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
