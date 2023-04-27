@@ -12,9 +12,7 @@ const verifyEmail = async (req, res, next) => {
             throw new NotFound('Email not found');
         }
         if (user.verify) {
-            throw new BadRequest({
-                message: 'Verification has already been passed',
-            });
+            throw new BadRequest('Verification has already been passed');
         }
 
         const verifyEmail = {
